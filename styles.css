@@ -210,29 +210,6 @@ h1 {
   text-transform: uppercase;
 }
 
-.link-actions {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.download-chip {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 50px;
-  min-height: 34px;
-  padding: 7px 10px;
-  border-radius: 999px;
-  background: rgba(217, 172, 90, 0.16);
-  color: #f8e4ba;
-  font-size: 0.78rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  cursor: pointer;
-  text-decoration: none;
-}
-
 .footer {
   padding: 28px 0 0;
   color: rgba(248, 244, 232, 0.72);
@@ -331,10 +308,6 @@ h1 {
     grid-column: 1 / -1;
   }
 
-  .link-card:has(.link-thumb) .link-actions {
-    grid-column: 1 / -1;
-  }
-
   .link-thumb {
     width: 54px;
   }
@@ -343,11 +316,4 @@ h1 {
     width: 100%;
   }
 
-  .download-chip {
-    flex: 1;
-  }
-
-  .link-actions .arrow {
-    flex: 1;
-  }
 }
