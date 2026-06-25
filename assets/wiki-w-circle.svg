@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title">
+  <title>Wiki tecnico</title>
+  <circle cx="80" cy="80" r="72" fill="#d8d8d8"/>
+  <circle cx="80" cy="80" r="70" fill="none" stroke="#9f9f9f" stroke-width="4"/>
+  <text x="80" y="101" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700" fill="#4f4f4f">W</text>
+</svg>
