@@ -1,0 +1,38 @@
+name: Deploy to Codeberg Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to Codeberg Pages branch
+        env:
+          CODEBERG_TOKEN: ${{ secrets.CODEBERG_TOKEN }}
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git checkout --orphan pages
+          git rm -rf . || true
+
+          git checkout main -- .
+
+          rm -rf .github
+
+          touch .nojekyll
+
+          git add .
+          git commit -m "Deploy Codeberg Pages"
+
+          git remote add codeberg https://Gioppo:${CODEBERG_TOKEN}@codeberg.org/Gioppo/notteinquieta-mappa.git
+
+          git push --force codeberg pages
