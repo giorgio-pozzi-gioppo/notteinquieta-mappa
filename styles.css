@@ -63,18 +63,28 @@ a {
   padding: 18px 4px 22px;
 }
 
-.portrait-wrap {
-  width: clamp(104px, 28vw, 148px);
-  aspect-ratio: 1;
+.logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 4vw, 28px);
+  width: 100%;
   margin-bottom: 18px;
   filter: drop-shadow(0 22px 42px rgba(0, 0, 0, 0.38));
 }
 
 .portrait {
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: clamp(72px, 22vw, 148px);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.logo-row .portrait:first-child,
+.logo-row .portrait:last-child {
+  transform: scale(0.86);
 }
 
 .kicker {
@@ -86,14 +96,14 @@ a {
 }
 
 h1 {
-  max-width: 12ch;
+  max-width: 100%;
   margin: 0;
   font-family: Oswald, Impact, "Arial Narrow", sans-serif;
-  font-size: clamp(3rem, 12vw, 5.15rem);
+  font-size: clamp(1rem, 6vw, 3rem);
   line-height: 1;
   font-weight: 700;
   text-transform: uppercase;
-  text-wrap: balance;
+  white-space: nowrap;
 }
 
 .intro {
